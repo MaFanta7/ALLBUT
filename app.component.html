@@ -1,0 +1,47 @@
+<ion-split-pane>
+  <ion-menu side="start" menuId="custom" class="my-custom-menu">
+    <ion-header>
+      <ion-toolbar color="primary">
+        <ion-title style="padding: 10%">ALL BUTS</ion-title>
+        <ion-label routerDirection="root" [routerLink]="pages/news" href="#" style="margin-left:20%; padding: 7%; margin-top:20%; margin-bottom: 20%; border-radius: 10px;"> Se connecter</ion-label>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <ion-item routerDirection="root" [routerLink]="pages/news">
+        <ion-icon name="square-outline"></ion-icon>
+        <ion-label>Langue</ion-label>
+      </ion-item>
+      <ion-item routerDirection="root" [routerLink]="pages/news">
+        <ion-icon name="settings"></ion-icon>
+        <ion-label>Parametres</ion-label>
+      </ion-item>
+      <ion-tab-button tab="login">
+        <ion-icon name="bookmark" color="primary"></ion-icon>
+        <ion-label > Login</ion-label>
+      </ion-tab-button>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+
+  <ion-router-outlet main></ion-router-outlet>
+</ion-split-pane>
+
+<!--<ion-fab horizontal="end" vertical="top" slot="fixed">
+  <ion-fab-button color="secondary">
+    <ion-icon name="menu"></ion-icon>
+  </ion-fab-button>
+  <ion-fab-list side="bottom">
+    <ion-button
+      *ngFor="let infoPage of navigationService.infoPages"
+      [href]="infoPage.href ? infoPage.href : null"
+      [routerLink]="infoPage.routerLink ? infoPage.routerLink : null"
+      color="medium"
+      shape="round"
+      fill="outline"
+    >
+      <ion-icon [name]="infoPage.icon" slot="end"></ion-icon>
+      <ion-label>{{ infoPage.title }}</ion-label>
+    </ion-button>
+  </ion-fab-list>
+</ion-fab>-->
